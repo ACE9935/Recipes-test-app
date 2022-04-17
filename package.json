@@ -17,6 +17,7 @@
     "gsap": "^3.10.2",
     "jquery": "^3.6.0",
     "kute.js": "^2.2.2",
+    "netlify-identity-widget": "^1.9.2",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
