@@ -1,0 +1,9 @@
+
+$bundle:(
+"main":rgb(221, 145, 46),
+"main-light":rgba(255, 182, 86, 0.788)
+);
+
+@function color-get($color) {
+    @return map-get($bundle ,  $color);
+  }

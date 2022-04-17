@@ -1,0 +1,85 @@
+@use "styles/colors-set.scss" as c;
+@import "styles/set-up.scss";
+@import "styles/custom.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@media  screen and (max-width:992px) {
+main >.row{
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+  
+}  
+}
+.fs-base{
+font-size: 16px !important;
+}
+.fs-lg{
+  font-size: 20px !important;
+}
+.fs-sm{
+  font-size: 10px;
+}
+.fs-base-res{
+  font-size: 1.6rem !important;
+}
+@for $i from 1 through 6 {
+  .fs-#{$i}{
+    font-size: 0rem + $i !important;
+  }
+}
+
+
+.nav-bar{
+  border-bottom: 4px solid;
+  border-image: linear-gradient(90deg,gold,red) 1;
+  overflow:hidden;
+  height: max-content;
+  background-color: c.color-get("main");
+  padding: 0.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display: flex;
+  padding: 12px;
+  background-color: rgb(255, 81, 0);
+  box-shadow: 0.5rem 0.5rem 7px 0.1rem rgba(0, 0, 0, 0.583);
+  border-radius: 50%;
+  overflow: hidden;
+  &>span{
+  color: white;
+  font-weight: bold;
+  }
+}
+
+.main-content{
+  min-height: calc(95vh - 9rem);
+  .navbar-nav{
+    width: 100%;
+    .accordion *{
+      background-color: rgba(255, 0, 0, 0) !important;
+    }
+  }
+  .nav-link{
+    border-bottom: 2px solid white;
+    &:hover{
+      background-color: lighten(c.color-get("main"),10%) !important;
+    }
+  }
+  &,&>*{
+    background-color: c.color-get("main-light");
+    min-height: calc(96vh - 9rem);
+  }
+}
+
+footer{
+  padding: 7px;
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg,gold,red) 1;
+  background-color:c.color-get("main");
+  display: grid;
+  place-items: center;
+}
+
