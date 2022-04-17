@@ -32,7 +32,6 @@ export const getStaticProps=({params})=>{
 }
 
 export function RecipeDetails({tx}) {
- if(!tx) return <div>ok</div>
  useEffect(()=>{
      
      const bootstrap=require("bootstrap/dist/js/bootstrap")
@@ -44,7 +43,7 @@ export function RecipeDetails({tx}) {
       return new bootstrap.Toast(toastEl, {animation:true,autohide:true,delay:50000})
     })
  },[])
-
+ if(!tx) return <div>ok</div>
  const recipe=datax.filter(o=>o.dish==tx)
  return(
   <AnimatePresence exitBeforeEnter>
@@ -63,8 +62,8 @@ export function RecipeDetails({tx}) {
     <small className="fs-sm">small reminder</small>
     <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
-  <div class="toast-body fs-base bg-light">
-    Dont't forget to visit our <a href="#" className="text-warning">instagram</a> page for more delicious recipes
+  <div className="toast-body fs-base bg-light">
+    Dontt forget to visit our <a href="#" className="text-warning">instagram</a> page for more delicious recipes
   </div>
 </div>
     <section className="container-lg pt-4">

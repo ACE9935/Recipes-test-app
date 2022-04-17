@@ -7,7 +7,7 @@ function Container() {
     <div className="container-md pt-3">
     <div className="row justify-content-center">
     {datax.map(o=>{
-      return <Card title={o.dish} imageUrl={o.images} time={o.time} recommended={o.recommended}/>
+      return <Card title={o.dish} key={o.id} imageUrl={o.images} time={o.time} recommended={o.recommended}/>
     })}
    </div>
    </div>
