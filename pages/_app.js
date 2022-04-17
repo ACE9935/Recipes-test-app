@@ -3,10 +3,12 @@ import React from "react";
 import Layout from '../component/Layout'
 const { motion, AnimatePresence } = require("framer-motion");
 import {animation} from '../component/animation';
+import { AuthContextProvider } from '../stores/auth';
 
 
 function App({ Component, pageProps, router }) {
   return (
+    <AuthContextProvider>
     <Layout>
       <AnimatePresence exitBeforeEnter>
       <motion.main
@@ -20,6 +22,7 @@ function App({ Component, pageProps, router }) {
       </motion.main>
       </AnimatePresence>
     </Layout>
+    </AuthContextProvider>
   )
 }
 
